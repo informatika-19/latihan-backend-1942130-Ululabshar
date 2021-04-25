@@ -1,16 +1,26 @@
 {
   "name": "latihan-backend",
   "version": "1.0.0",
-  "description": "latian membuat server",
+  "description": "latihan membuat backend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ululabshar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/informatika-19/latihan-backend-1942130-Ululabshar.git"
+  },
+  "author": "ulul abshar",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/informatika-19/latihan-backend-1942130-Ululabshar/issues"
+  },
+  "homepage": "https://github.com/informatika-19/latihan-backend-1942130-Ululabshar#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
   },
   "devDependencies": {}
 }
