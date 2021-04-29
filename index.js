@@ -51,7 +51,7 @@ app.get('/daerah/:daerah',(req, res)=>{
 
 
 app.use('/user/', require ('./routes/User'))
-
+app.use('/kegiatan/', require ('./routes/kegiatan'))
 
 app.listen(3000, () => {
     console.log('server started')

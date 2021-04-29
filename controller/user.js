@@ -2,6 +2,7 @@ const userModel = require('../model/user')
 const bcrypt = require('bcrypt')
 exports.register = (data) =>
     new Promise ((resolve, reject) =>{
+        //cari data
         userModel.findOne({
             name : data.name
         }).then(user => {
@@ -32,4 +33,30 @@ exports.register = (data) =>
             }
     })   
         
+})
+
+exports.login = (data) =>
+new Promise((resolve, reject)=>{
+    userModel.findOne({
+        name : data.name
+    }).then(user => {
+        if(user){
+            if(bcrypt.compareSync(data.password, user.password)){
+                resolve({
+                    status : true,
+                    pesan : 'berhasil login'
+                })
+            }else{
+                reject({
+                    status : false,
+                    pesan : 'username atau password salah'
+                })
+            }
+        }else{
+                reject({
+                    status : false,
+                    pesan : 'username atau password salah'
+            })
+        }
+    }) 
 })
